@@ -1,0 +1,57 @@
+html, body{
+    background: white;
+    height: 100%;
+    width: 100%;
+    font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .15em;
+}
+
+body > header > div > div > ul.nav.col-12.col-lg-auto.my-2.justify-content-center.my-md-0.text-small{
+    font-weight: bolder;
+}
+
+.bracdtext{
+    color: #3e4152; 
+    letter-spacing: 3px; 
+    padding: 20px ; 
+}
+
+div.title-TEXT{
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    max-height: 5em;
+    font-weight: 700;
+}
+
+body > header > div > div > ul.nav.col-12.col-lg-auto.me-lg-auto.mb-2.justify-content-center.mb-md-0{
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    font-weight: 700;
+}
+
+.txtbld{
+    color: #282c3f;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: small;
+}
+
+.popular-searches a {
+    color: #666;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.popular-searches a:hover {
+    text-decoration: underline;
+}
+
+.footer-note {
+    font-size: 14px;
+    color: #777;
+}

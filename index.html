@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:image/png;base64,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" sizes="64x64">
+    <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+        <header class="p-3 mb-lg-0 border-bottom head shadow-sm mb-5 rounded sticky-top bg-white">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                        <img class="bi me-2" width="45" height="32" role="img" aria-label="Bootstrap" src="./icon/logo.png" alt="">
+                    </a>
+        
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-17 link-body-emphasis header-font">MEN</a></li>
+                        <li><a href="#" class="nav-link px-17 link-body-emphasis header-font">WOMEN</a></li>
+                        <li><a href="#" class="nav-link px-17 link-body-emphasis header-font">KIDS</a></li>
+                        <li><a href="#" class="nav-link px-17 link-body-emphasis header-font">HOME</a></li>
+                        <li><a href="#" class="nav-link px-17 link-body-emphasis header-font">BEAUTY</a></li>
+                        <li><a href="#" class="nav-link px-17 link-body-emphasis header-font">GENZ</a></li>
+                        <li><a href="#" class="nav-link pl-17 link-body-emphasis header-font">STUDIO</a></li>
+                    </ul>
+        
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control" placeholder="Search the product, brand and more." aria-label="Search">
+                    </form>
+        
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small ">
+                        <li>
+                            <a href="#" class="nav-link text-secondary">
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person d-block mx-auto mb-1 " viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                </svg>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link text-secondary">
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"fill="currentColor" class="bi-heart bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                                Wishlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link text-secondary">
+                                <!-- <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                </svg>
+                                Bag
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+    
+        
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide pt-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="./Banner/2.webp" class="d-block w-100" alt="...">
+                </div>
+            <div class="carousel-item">
+                <img src="./Banner/3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Banner/4.webp" class="d-block w-100" alt="...">
+            </div>
+            </div>
+        </div>
+
+        <div class="brandtext container pt-5 title-TEXT">
+            
+                RISING STARS
+            
+        </div>
+
+        
+        <div id="carouselExampleSlidesOnly" class="carousel slide py-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Rising star/1.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/2.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/3.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/4.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/5.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Rising star/6.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/7.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/8.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/9.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/10.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Rising star/11.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/12.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/13.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/14.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Rising star/15.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brandtext container pt-5 title-TEXT">
+            
+                LUXE GRAND REDUCTION DEALS
+            
+        </div>
+
+        
+        <div id="carouselExampleSlidesOnly" class="carousel slide py-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Luxury deals/1.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/2.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/3.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/4.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/5.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/6.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Luxury deals/7.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/8.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/9.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/10.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/11.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/12.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Luxury deals/13.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/14.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/15.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/16.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/17.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Luxury deals/18.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brandtext container pt-5 title-TEXT">
+            
+                MEDAL WORTHY BRANDS TO BAG
+            
+        </div>
+
+        
+        <div id="carouselExampleSlidesOnly" class="carousel slide py-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Medal Brands/1.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/2.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/3.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/4.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/5.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/6.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Medal Brands/7.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/8.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/9.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/10.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/11.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/12.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Medal Brands/13.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/14.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/15.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/16.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/17.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/18.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./Medal Brands/19.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/20.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/21.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/22.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/23.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./Medal Brands/24.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="brandtext container pt-5 title-TEXT">
+            GRAND GLOBAL BRANDS
+        </div>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide py-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./global brand/1.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/2.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/3.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/4.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/5.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/6.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col ">
+                            <img src="./global brand/7.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/8.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/9.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/10.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/11.webp" alt="" class="d-block w-100">
+                        </div>
+                        <div class="col">
+                            <img src="./global brand/12.webp" alt="" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class=" container pt-5 title-TEXT">
+            
+            SHOP BY CATEGORY
+            
+        </div>
+        
+        <section>
+            <div class="py-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carosel-item"> 
+                        <div class="row g-0">
+                            <div class="col">
+                                <img src="./Catagory/1.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/2.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/3.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/4.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/5.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/6.webp" alt="" class=" w-100 ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carosel-item"> 
+                        <div class="row g-0">
+                            <div class="col">
+                                <img src="./Catagory/7.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/8.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/9.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/10.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/11.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/12.webp" alt="" class=" w-100 ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carosel-item"> 
+                        <div class="row g-0">
+                            <div class="col">
+                                <img src="./Catagory/13.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/14.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/15.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/16.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/17.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/18.webp" alt="" class=" w-100 ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carosel-item"> 
+                        <div class="row g-0">
+                            <div class="col">
+                                <img src="./Catagory/19.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/20.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/21.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/22.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/23.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/24.webp" alt="" class=" w-100 ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carosel-item"> 
+                        <div class="row g-0">
+                            <div class="col">
+                                <img src="./Catagory/25.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/26.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/27.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/28.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/29.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/30.webp" alt="" class=" w-100 ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carosel-item"> 
+                        <div class="row g-0">
+                            <div class="col">
+                                <!-- <img src="./Catagory/32.webp" alt="" class="  w-100 "> -->
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/31.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/32.webp" alt="" class="  w-100 ">
+                            </div>
+                            <div class="col">
+                                <img src="./Catagory/33.webp" alt="" class=" w-100 ">
+                            </div>
+                            <div class="col">
+                                <!-- <img src="./Catagory/33.webp" alt="" class=" w-100 "> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-body-tertiary">
+            <div class="container ">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <div class="txtbld mb-3">ONLINE SHOPPING</div>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Men</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Women</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Kids</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Beauty</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Genz</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
+                                <li class="nav-item mb-5"><a href="#" class="nav-link p-0 text-body-secondary">Myntra Insider</a></li>
+                            </ul>
+                            
+                            <div class="txtbld mb-3">USEFUL LINKS</div>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Carrers</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Site Map</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Corporate Information</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Whitehat</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cleartrip</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="col-6 col-md-2 mb-3">
+                            <div class="txtbld mb-3">CUSTOMER POLICIES</div>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">T&C</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Track Orders</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cancellation</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy policy</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Grievance Redressal</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 mb-3">
+                            <div class="txtbld mb-3">EXPERIENCE MYNTRA APP ON MOBILE</div>
+                            
+                            <div class="row g-0 mb-5"> 
+                                <div class="col-5">
+                                    <img src="./footer mage/google.png" alt="Google Play" class="w-100 h-100">
+                                </div>
+                                <div class="col-5">
+                                    <img src="./footer mage/appi.png" alt="App Store" class="w-100">
+                                </div>
+                            </div>
+                            
+                            <div class="txtbld mb-3">KEEP IN TOUCH</div>
+                            <div class="row g-0 mb-2">
+                                <div class="col-1 mx-2">
+                                    <img src="./footer mage/facebook.png" alt="" class="w-100 ">
+                                </div>
+                                <div class="col-1 mx-2">
+                                    <img src="./footer mage/twitter.png" alt="" class="w-100">
+                                </div>
+                                <div class="col-1 mx-2">
+                                    <img src="./footer mage/utube.png" alt="" class="w-100 h-100">
+                                </div>
+                                <div class="col-1 mx-2">
+                                    <img src="./footer mage/insta.png" alt="" class="w-100">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-6 col-md-4 mb-2">
+                            <div class="row g-0 mb-3">
+                                <div class="col-2">
+                                    <img src="./footer mage/origi.png" alt="Google Play" class="w-100 ">
+                                </div>
+                                <div class="col-9 ">
+                                <p class="px-3 mb-1"><b>100% ORIGINAL</b> guarantee for all</p>
+                                <p  class="px-3"> products at myntra.com</p>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-2">
+                                    <img src="./footer mage/num.png" alt="Google Play" class="w-100 ">
+                                </div>
+                                <div class="col-9">
+                                <p class="px-3 mb-1"><b>Return within 14days</b> of receiving</p>
+                                <p class="px-3">your order</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    <div class="container mt-5">
+                        <h6 class="fw-bold pb-2">POPULAR SEARCHES</h6>
+                        <hr>
+                        <div class="popular-searches ">
+                            <p class="my-5">
+                                <a href="#">Nike</a> | <a href="#">Puma</a> | <a href="#">Adidas</a> | <a href="#">Fila</a> |
+                                <a href="#">Lee</a> | <a href="#">United Colors of Benetton</a> | <a href="#">Wrangler</a> |
+                                <a href="#">Fastrack</a> | <a href="#">Woodland</a> | <a href="#">Yepme</a> |
+                                <a href="#">Levis</a> | <a href="#">Tommy Hilfiger</a> | <a href="#">peter-england</a> |
+                                <a href="#">fabindia</a> | <a href="#">nike shoes</a> | <a href="#">tops</a> |
+                                <a href="#">shirts</a> | <a href="#">jackets</a> | <a href="#">myntra coupons</a> |
+                                <a href="#">kurtis</a> | <a href="#">shoes</a> | <a href="#">tunics</a> |
+                                <a href="#">dresses</a> | <a href="#">Watches</a> | <a href="#">saree</a> |
+                                <a href="#">kurtas</a> | <a href="#">bags</a> | <a href="#">T-shirts</a> |
+                                <a href="#">designer saree</a> | <a href="#">sunglasses</a> | <a href="#">jeans</a> |
+                                <a href="#">trousers</a> | <a href="#">adidas shoes</a> | <a href="#">casual shoes</a> |
+                                <a href="#">sports shoes</a> | <a href="#">fastrack watches</a> |
+                                <a href="#">ethnic wear</a> | <a href="#">woodland-shoes</a> | <a href="#">mobile app</a> |
+                                <a href="#">puma shoes</a> | <a href="#">accessories</a> | <a href="#">anarkali suit</a> |
+                                <a href="#">running shoes</a> | <a href="#">reebok</a> | <a href="#">formal wear</a> |
+                                <a href="#">cat</a> | <a href="#">jewellery</a>
+                            </p>
+                        </div>
+                    
+                        <div class="d-flex justify-content-between footer-note mt-4">
+                            <div>In case of any concern, <a href="#" class="fw-bold text-primary">Contact Us</a></div>
+                                <div class="text-end">
+                                    © 2025 www.myntra.com. All rights reserved. <br>
+                                </div>
+                                <span class="text-muted">A Flipkart company</span>
+                            </div>
+                        </div>
+                </footer>
+            </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
